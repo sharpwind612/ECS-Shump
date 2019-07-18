@@ -116,6 +116,9 @@
     <Reference Include="Unity.Timeline">
       <HintPath>D:/Projects/ECS-Shump/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Rendering.Hybrid">
+      <HintPath>D:/Projects/ECS-Shump/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Projects/ECS-Shump/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
@@ -169,9 +172,6 @@
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
       <HintPath>D:/Projects/ECS-Shump/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rendering.Hybrid">
-      <HintPath>D:/Projects/ECS-Shump/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/2019.2.0b7/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
