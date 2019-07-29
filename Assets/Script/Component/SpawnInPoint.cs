@@ -6,9 +6,24 @@ using UnityEngine;
 namespace Shump
 {
     [Serializable]
-    public struct SpawnInPoint : ISharedComponentData
+    public struct SpawnInPoint : ISharedComponentData, IEquatable<SpawnInPoint>
     {
-        public Entity Prefab;
+        public GameObject Prefab;
+
+        public bool Equals(SpawnInPoint other)
+        {
+            return Prefab != null && Prefab.Equals(other.Prefab);
+        }
+
+        public override int GetHashCode()
+        {
+            //int hash = MaxVoxelCount.GetHashCode();
+
+            //if (!ReferenceEquals(RendererSettings, null))
+            //    hash ^= RendererSettings.GetHashCode();
+
+            return Prefab.GetHashCode();
+        }
     }
 
     namespace Authoring
@@ -26,7 +41,8 @@ namespace Shump
                 {
                     // The referenced prefab will be converted due to DeclareReferencedPrefabs.
                     // So here we simply map the game object to an entity reference to that prefab.
-                    Prefab = conversionSystem.GetPrimaryEntity(Prefab),
+                    //Prefab = conversionSystem.GetPrimaryEntity(Prefab),
+                    Prefab = Prefab
                 };
                 dstManager.AddSharedComponentData(entity, spawnerData);
             }
